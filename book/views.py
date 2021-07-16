@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+def main(request):
+    return render(request, 'book/main.html')
+
+
+def add_goal(request):
+    return render(request, 'book/add_goal.html')

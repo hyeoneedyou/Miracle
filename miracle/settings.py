@@ -69,7 +69,7 @@ ROOT_URLCONF = 'miracle.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'miracle', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

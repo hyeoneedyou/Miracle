@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+def main(request):
+    return render(request, 'wakeup/main.html')
+
+
+def add_goal(request):
+    return render(request, 'wakeup/add_goal.html')
