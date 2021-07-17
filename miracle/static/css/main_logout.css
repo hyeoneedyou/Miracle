@@ -1,0 +1,24 @@
+.main {
+  width: 100%;
+  background-color: var(--main-orange-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home_subtitle {
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.home_title {
+  font-size: 9em;
+  font-weight: 800;
+  margin: 0;
+  text-align: center;
+}
+
+.btn1 {
+  margin: 0 auto;
+}
