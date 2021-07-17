@@ -1,0 +1,62 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+<nav class="nav_container">
+  <h2 class="nav_title">MIRACLE</h2>
+  <div class="nav_user">
+    <img class="nav_logo" src="{% static 'img/logo.png' %}" alt="">
+    <h3 class="nav_userName">달달망고</h3>
+  </div>
+  <ul class="nav_category list">
+    <li>
+      <button class="nav_showListBtn toggleBtn">
+        <i class="fas fa-caret-down"></i>
+      </button>
+      운동
+    </li>
+    <li>
+      <button class="nav_showListBtn toggleBtn">
+        <i class="fas fa-caret-down"></i>
+      </button>
+      공부시간
+    </li>
+    <li>
+      <button class="nav_showListBtn toggleBtn">
+        <i class="fas fa-caret-down"></i>
+      </button>
+      기상시간
+    </li>
+    <li>
+      <button class="nav_showListBtn toggleBtn">
+        <i class="fas fa-caret-down"></i>
+      </button>
+      독서
+    </li>
+    <ul class="nav_category sublist">
+      <li class="nav_goal">나는야 독서왕</li>
+      <li class="nav_goal">독서왕 망고</li>
+    </ul>
+    <li>
+      <button class="nav_showListBtn toggleBtn">
+        <i class="fas fa-caret-down"></i>
+      </button>
+      자율
+    </li>
+  </ul>
+  <div class="nav_plus">
+    <button class="nav_showPlusBtn toggleBtn">
+      <i class="fas fa-plus-circle nav_plusBtn"></i>
+    </button>
+    <ul class="nav_category plusList">
+      <li>운동</li>
+      <li>공부시간</li>
+      <li>기상시간</li>
+      <li>독서</li>
+      <li>자율</li>
+    </ul>
+  </div>
+  <h3 class="nav_logout">로그아웃</h3>
+</nav>
+
+<script src="{% static 'js/navbar.js' %}"></script>
