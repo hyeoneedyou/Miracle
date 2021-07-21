@@ -1,3 +1,9 @@
+/*  공통 */
+button.verify_btn {
+  margin: 12px 0;
+}
+
+/* 공부시간 */
 .goal_time {
   font-size: 10rem;
   font-weight: 800;
@@ -10,6 +16,11 @@
   align-items: flex-end;
 }
 
-button.verify_btn {
-  margin: 12px 0;
+/* 기상시간 */
+button.wakeBtn {
+  margin: 12px auto;
+}
+
+.verify_wakeTime {
+  text-align: center;
 }
