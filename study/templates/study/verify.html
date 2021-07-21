@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/verify.css' %}">
+
+<section class="main">
+  <h1 class="goal_title">공부시간 인증하기</h1>
+  <div class="goal_container">
+    <div class="goal_time">
+      00:00:00
+    </div>
+    <div class="verify_btnList">
+      <button class="verify_btn btn1">Start</button>
+      <button class="verify_btn btn1">Stop</button>
+      <button class="verify_btn btn1">Resume</button>
+    </div>
+  </div>
+</section>
+{% endblock %}

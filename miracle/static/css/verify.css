@@ -1,0 +1,15 @@
+.goal_time {
+  font-size: 10rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.verify_btnList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+button.verify_btn {
+  margin: 12px 0;
+}
