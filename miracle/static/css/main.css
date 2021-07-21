@@ -14,6 +14,7 @@
   width: 15%;
   font-size: 1.2rem;
   padding: var(--padding-large) 0;
+  margin: 0 12px;
 }
 
 .goal_day {
