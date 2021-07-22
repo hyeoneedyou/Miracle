@@ -1,8 +1,8 @@
 .nav_container {
+  background-color: var(--white-dark-color);
   display: flex;
   flex-direction: column;
   width: 20rem;
-  height: 90vh;
   padding: var(--layout-padding);
   font-family: "lgRegular";
 }
@@ -10,6 +10,11 @@
 .nav_title,
 .nav_category.plusList {
   text-align: center;
+}
+
+.nav_a {
+  text-decoration: none;
+  color: var(--black-color);
 }
 
 /* 프로필 */
@@ -21,7 +26,7 @@
   width: 100px;
 }
 
-.nav_userName {
+.nav_userText {
   padding-left: var(--padding-small);
 }
 
