@@ -6,3 +6,6 @@ def main(request):
 
 def add_goal(request):
     return render(request, 'study/add_goal.html')
+
+def certify(request):
+    return render(request, 'study/certify.html')

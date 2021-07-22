@@ -1,0 +1,11 @@
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 100%;
+  overflow-x: hidden;
+  padding: var(--layout-padding);
+}

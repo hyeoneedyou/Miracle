@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/certify.css' %}">
+
+<section class="main">
+  <h1 class="goal_title">기상시간 인증하기</h1>
+  <div class="goal_container">
+    <div class="goal_time">
+      <button class="verify_btn wakeBtn btn1">일어났어요!</button>
+    </div>
+    <div class="verify_wakeTime">
+      오전 7시 16분에 기상하셨습니다!
+    </div>
+    <div class="verify_btnList">
+      <button class="verify_btn btn1">인증하기</button>
+    </div>
+  </div>
+</section>
+{% endblock %}

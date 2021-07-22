@@ -1,0 +1,25 @@
+/*  공통 */
+button.verify_btn {
+  margin: 12px 12px;
+}
+
+/* 공부시간 */
+.goal_time {
+  font-size: 10vw;
+  font-weight: 800;
+  text-align: center;
+}
+
+.verify_btnList {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 기상시간 */
+button.wakeBtn {
+  margin: 12px auto;
+}
+
+.verify_wakeTime {
+  text-align: center;
+}
