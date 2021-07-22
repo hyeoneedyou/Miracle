@@ -7,5 +7,5 @@ def main(request):
 def add_goal(request):
     return render(request, 'study/add_goal.html')
 
-def verify(request):
-    return render(request, 'study/verify.html')
+def certify(request):
+    return render(request, 'study/certify.html')
