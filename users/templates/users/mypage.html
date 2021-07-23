@@ -111,11 +111,10 @@
     </div>
     <div class="my_info">
       <ul class="my_info_list">
-        <li>이름<span>소도현</span></li>
-        <li>비밀번호<span>1111</span></li>
-        <li>닉네임<span>달달망고</span></li>
-        <li>info <span>what</span></li>
+        <li>이름<span>{{ user }}</span></li>
+        <li>닉네임<span>{{user.profile.nickname}}</span></li>
       </ul>
+      <a href="{% url 'users:mypage_update' %}" class="btn2">개인정보 수정</a>
     </div>
   </div>
   </div>
