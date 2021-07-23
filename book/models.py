@@ -9,7 +9,6 @@ class Book(models.Model):
     start_days = models.IntegerField(default=0)
     continuity_days = models.IntegerField(default=0)
     success_days = models.IntegerField(default=0)
-    total_page = models.IntegerField(default=0)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
