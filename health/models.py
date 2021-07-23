@@ -5,7 +5,7 @@ class Health(models.Model):
     name = models.CharField(max_length=10)
     goal_hour = models.IntegerField(default=0)
     goal_minute = models.IntegerField(default=0)
-    created = models.DateTimeField(auto_now_add=True)
+    created = models.DateField(auto_now_add=True)
     start_days = models.IntegerField(default=0)
     continuity_days = models.IntegerField(default=0)
     success_days = models.IntegerField(default=0)
@@ -14,7 +14,7 @@ class Health(models.Model):
 
 class Certify(models.Model):
     goal = models.ForeignKey(Health, on_delete=models.CASCADE)
-    created = models.DateTimeField(auto_now=True)
+    created = models.DateField(auto_now=True)
     fulfill_hour = models.IntegerField(default=0)
     fulfill_minute = models.IntegerField(default=0)
     achievement = models.BooleanField(default=False)
