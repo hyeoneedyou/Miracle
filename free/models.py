@@ -13,7 +13,7 @@ class Free(models.Model):
 
 
 class Certify(models.Model):
-    goal = models.ForeignKey(Free, on_delete=models.CASCADE)
+    goal = models.ForeignKey(Free, on_delete=models.CASCADE, related_name='certifies')
     created = models.DateField(auto_now=True)
     fulfill_value = models.IntegerField(default=0)
     achievement = models.BooleanField(default=False)

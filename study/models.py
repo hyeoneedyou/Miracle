@@ -13,7 +13,7 @@ class Study(models.Model):
 
 
 class Certify(models.Model):
-    goal = models.ForeignKey(Study, on_delete=models.CASCADE)
+    goal = models.ForeignKey(Study, on_delete=models.CASCADE, related_name='certifies')
     created = models.DateField(auto_now=True)
     fulfill_hour = models.IntegerField(default=0)
     fulfill_minute = models.IntegerField(default=0)

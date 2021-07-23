@@ -13,7 +13,7 @@ class Book(models.Model):
 
 
 class Certify(models.Model):
-    goal = models.ForeignKey(Book, on_delete=models.CASCADE)
+    goal = models.ForeignKey(Book, on_delete=models.CASCADE, related_name='certifies')
     created = models.DateField(auto_now=True)
     book_name = models.CharField(max_length=50)
     fulfill_page = models.IntegerField(default=0)
