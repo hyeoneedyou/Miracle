@@ -10,9 +10,11 @@
     <button class="btn clicked my_infoBtn">개인 정보 보기</button>
   </div>
   <div class="my_content">
-      <form action="{% url 'users:mypage_update' %}" method="POST">
+      <form action="{% url 'users:mypage_update' %}" method="POST" enctype="multipart/form-data">
         {%csrf_token%}
         <ul class="my_info_list">
+            <img id="image_section" src="#" alt=""/>
+            <li>프로필 <input type="file" name="image" id="imageInput"></li>
             <li>닉네임 <input type="text" name="nickname" value="{{user.profile.nickname}}"></li>
         </ul>
         <button type="submit" class="btn2">개인정보 수정</button>

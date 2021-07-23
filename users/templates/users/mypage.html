@@ -111,7 +111,12 @@
     </div>
     <div class="my_info">
       <ul class="my_info_list">
-        <li>이름<span>{{ user }}</span></li>
+        {% if not user.profile.image %}
+          <img class="nav_logo" src="{% static 'img/logo.png' %}" alt="">
+        {% else %}
+          <img class="nav_logo" src="{{user.profile.image.url}}" alt="">
+        {% endif %}
+        <li>이름<span>{{user}}</span></li>
         <li>닉네임<span>{{user.profile.nickname}}</span></li>
       </ul>
       <a href="{% url 'users:mypage_update' %}" class="btn2">개인정보 수정</a>

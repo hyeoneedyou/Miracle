@@ -7,7 +7,11 @@
     <a href="{% url 'main:main_login' %}" class="nav_a miracle">MIRACLE</a>
   </h2>
   <div class="nav_user">
-    <img class="nav_logo" src="{% static 'img/logo.png' %}" alt="">
+    {% if not user.profile.image %}
+      <img class="nav_logo" src="{% static 'img/logo.png' %}" alt="">
+    {% else %}
+      <img class="nav_logo" src="{{ request.user.profile.image.url }}" alt="">
+    {% endif %}
     <div class="nav_userText">
       <h3 class="nav_userName">달달망고</h3>
       <a href="{% url 'users:mypage' %}" class="nav_a mypage">마이페이지</a>

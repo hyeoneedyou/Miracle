@@ -8,7 +8,8 @@ def mypage(request):
 def mypage_update(request):
     user = request.user
     if request.method == "POST":
-        user.profile.nickname=request.POST.get('nickname')
+        user.profile.nickname = request.POST.get('nickname')
+        user.profile.image = request.FILES.get('image')
         user.save()
         return render(request, 'users/mypage.html', {'user':user})
     return render(request, 'users/mypage_update.html', {'user':user})
