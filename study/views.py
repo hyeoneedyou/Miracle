@@ -47,30 +47,22 @@ def get_status(goal):   # 시작, 성공, 연속 일수를 리턴하는 함수
 def get_board(goal, start_days):    # 도장판의 날짜와 성공 여부를 리턴하는 함수
     dates = []
     achievements = []
-    if start_days <= 30:    # 시작한지 1달이 되지 않았으면
-        for i in range(30):
+    for i in range(30):
+        if start_days <= 30:  # 시작한지 1달이 되지 않았으면
             date = goal.created + timedelta(days=i)  # 시작한 날짜부터 오늘까지 날짜를 보여준다
-            dates.append(date.strftime('%m/%d'))
-            certify = goal.certifies.filter(created=date)
-            if certify:  # 날짜에 해당하는 인증이 있으면
-                achievements.append(certify.first().achievement)
-            else:  # 인증 안 했으면
-                if date < datetime.date.today():    # 과거라면
-                    achievements.append(False)  # 실천 실패로 처리
-                else:   # 미래라면
-                    achievements.append(None)     # 아무것도 보여주지 않음
-    else:  # 시작한지 1달이 넘었으면
-        for i in range(30):
+        else:  # 시작한지 1달이 넘었으면
             date = datetime.date.today() - timedelta(days=i)  # 오늘 날짜 이전 30일을 보여준다
-            dates.append(date.strftime('%m/%d'))
-            certify = goal.certifies.filter(created=date)
-            if certify:  # 날짜에 해당하는 인증이 있으면
-                achievements.append(certify.first().achievement)
-            else:  # 인증 안 했으면
-                if date < datetime.date.today():  # 과거라면
-                    achievements.append(False)  # 실천 실패로 처리
-                else:  # 미래라면
-                    achievements.append(None)  # 아무것도 보여주지 않음
+        # 날짜
+        dates.append(date.strftime('%m/%d'))
+        # 성공 여부
+        certify = goal.certifies.filter(created=date)
+        if certify:  # 날짜에 해당하는 인증이 있으면
+            achievements.append(certify.first().achievement)
+        else:  # 인증 안 했으면
+            if date < datetime.date.today():    # 과거라면
+                achievements.append(False)  # 실천 실패로 처리
+            else:   # 미래라면
+                achievements.append(None)     # 아무것도 보여주지 않음
     res = {
         'dates': dates,
         'achievements': achievements,
