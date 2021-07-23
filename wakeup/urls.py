@@ -4,7 +4,7 @@ from . import views
 
 app_name = 'wakeup'
 urlpatterns = [
-    path('', views.main, name="main"),
+    path('<int:goal_id>/', views.main, name="main"),
     path('add_goal/', views.add_goal, name="add_goal"),
     path('certify/', views.certify, name="certify"),
 ]
