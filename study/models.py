@@ -19,3 +19,4 @@ class Certify(models.Model):
     fulfill_hour = models.IntegerField(default=0)
     fulfill_minute = models.IntegerField(default=0)
     achievement = models.BooleanField(default=False)
+

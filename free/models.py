@@ -18,3 +18,4 @@ class Certify(models.Model):
     created = models.DateField()
     fulfill_value = models.IntegerField(default=0)
     achievement = models.BooleanField(default=False)
+
