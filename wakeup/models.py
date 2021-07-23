@@ -1,11 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class WakeUp(models.Model):
     name = models.CharField(max_length=10)
     goal_hour = models.IntegerField(default=0)
     goal_minute = models.IntegerField(default=0)
-    created = models.DateField(auto_now_add=True)
+    created = models.DateField()
     start_days = models.IntegerField(default=0)
     continuity_days = models.IntegerField(default=0)
     success_days = models.IntegerField(default=0)
@@ -14,7 +15,7 @@ class WakeUp(models.Model):
 
 class Certify(models.Model):
     goal = models.ForeignKey(WakeUp, on_delete=models.CASCADE, related_name='certifies')
-    created = models.DateField(auto_now=True)
+    created = models.DateField()
     fulfill_hour = models.IntegerField(default=0)
     fulfill_minute = models.IntegerField(default=0)
     achievement = models.BooleanField(default=False)
