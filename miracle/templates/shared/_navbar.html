@@ -8,9 +8,9 @@
   </h2>
   <div class="nav_user">
     {% if not user.profile.image %}
-      <img class="nav_logo" src="{% static 'img/logo.png' %}" alt="">
+    <img class="nav_logo" src="{% static 'img/logo.png' %}" alt="">
     {% else %}
-      <img class="nav_logo" src="{{ request.user.profile.image.url }}" alt="">
+    <img class="nav_logo" src="{{ request.user.profile.image.url }}" alt="">
     {% endif %}
     <div class="nav_userText">
       <h3 class="nav_userName">{{request.user.profile.nickname}}</h3>
@@ -25,8 +25,8 @@
       운동
     </li>
     <ul class="nav_category sublist">
-      <li class="nav_goal">나는야 독서왕</li>
-      <li class="nav_goal">독서왕 망고</li>
+      <!-- <li class="nav_goal">나는야 독서왕</li>
+      <li class="nav_goal">독서왕 망고</li> -->
     </ul>
     <li>
       <button class="nav_showListBtn toggleBtn">
@@ -35,8 +35,8 @@
       공부시간
     </li>
     <ul class="nav_category sublist">
-      <li class="nav_goal">나는야 독서왕</li>
-      <li class="nav_goal">독서왕 망고</li>
+      <!-- <li class="nav_goal">나는야 독서왕</li>
+      <li class="nav_goal">독서왕 망고</li> -->
     </ul>
     <li>
       <button class="nav_showListBtn toggleBtn">
@@ -45,8 +45,8 @@
       기상시간
     </li>
     <ul class="nav_category sublist">
-      <li class="nav_goal">나는야 독서왕</li>
-      <li class="nav_goal">독서왕 망고</li>
+      <!-- <li class="nav_goal">나는야 독서왕</li>
+      <li class="nav_goal">독서왕 망고</li> -->
     </ul>
     <li>
       <button class="nav_showListBtn toggleBtn">
@@ -65,8 +65,8 @@
       자율
     </li>
     <ul class="nav_category sublist">
-      <li class="nav_goal">나는야 독서왕</li>
-      <li class="nav_goal">독서왕 망고</li>
+      <!-- <li class="nav_goal">나는야 독서왕</li>
+      <li class="nav_goal">독서왕 망고</li> -->
     </ul>
   </ul>
   <div class="nav_plus">
