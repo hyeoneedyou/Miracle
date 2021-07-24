@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Profile
 
+
 def mypage(request):
     user = request.user
     return render(request, 'users/mypage.html', {'user':user})

@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Free, Certify
+
+admin.site.register(Free)
+admin.site.register(Certify)
