@@ -31,11 +31,11 @@ def get_status(goal):   # 시작, 성공, 연속 일수를 리턴하는 함수
     for i in range(certifies.count()):
         date = datetime.date.today() - timedelta(days=i)  # 오늘부터 거꾸로 가면서 성공했는지 확인
         certify = goal.certifies.filter(created=date)
-        if certify.first().achievement:     # 성공했으면 연속 일수를 1씩 증가
-            continuity_days += 1
-            continue
-        else:   # 실패했으면 종료
+        if not certify.first():     # 인증이 없다면 종료
             break
+        if not certify.first().achievement:     # 인증이 있으나 실패했으면 종료
+            break
+        continuity_days += 1    # 성공했으면 연속 일수를 1씩 증가
     res = {
         'start_days': start_days,
         'success_days': success_days,
