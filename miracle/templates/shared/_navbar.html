@@ -21,8 +21,9 @@
       운동
     </li>
     <ul class="nav_category sublist">
-      <li class="nav_goal">나는야 독서왕</li>
-      <li class="nav_goal">독서왕 망고</li>
+        {% for goal in request.user.health_set.all %}
+            <li class="nav_goal" onclick = "location.href = '{% url 'health:main' goal.id %}' ">{{ goal.name }}</li>
+        {% endfor %}
     </ul>
     <li>
       <button class="nav_showListBtn toggleBtn">
@@ -31,8 +32,9 @@
       공부시간
     </li>
     <ul class="nav_category sublist">
-      <li class="nav_goal">나는야 독서왕</li>
-      <li class="nav_goal">독서왕 망고</li>
+        {% for goal in request.user.study_set.all %}
+            <li class="nav_goal" onclick = "location.href = '{% url 'study:main' goal.id %}' ">{{ goal.name }}</li>
+        {% endfor %}
     </ul>
     <li>
       <button class="nav_showListBtn toggleBtn">
@@ -41,8 +43,9 @@
       기상시간
     </li>
     <ul class="nav_category sublist">
-      <li class="nav_goal">나는야 독서왕</li>
-      <li class="nav_goal">독서왕 망고</li>
+        {% for goal in request.user.wakeup_set.all %}
+            <li class="nav_goal" onclick = "location.href = '{% url 'wakeup:main' goal.id %}' ">{{ goal.name }}</li>
+        {% endfor %}
     </ul>
     <li>
       <button class="nav_showListBtn toggleBtn">
@@ -51,8 +54,9 @@
       독서
     </li>
     <ul class="nav_category sublist">
-      <li class="nav_goal">나는야 독서왕</li>
-      <li class="nav_goal">독서왕 망고</li>
+        {% for goal in request.user.book_set.all %}
+            <li class="nav_goal" onclick = "location.href = '{% url 'book:main' goal.id %}' ">{{ goal.name }}</li>
+        {%  endfor %}
     </ul>
     <li>
       <button class="nav_showListBtn toggleBtn">
@@ -61,8 +65,9 @@
       자율
     </li>
     <ul class="nav_category sublist">
-      <li class="nav_goal">나는야 독서왕</li>
-      <li class="nav_goal">독서왕 망고</li>
+        {% for goal in request.user.free_set.all %}
+            <li class="nav_goal" onclick = "location.href = '{% url 'free:main' goal.id %}' ">{{ goal.name }}</li>
+        {%  endfor %}
     </ul>
   </ul>
   <div class="nav_plus">
@@ -70,11 +75,11 @@
       <i class="fas fa-plus-circle nav_plusBtn"></i>
     </button>
     <ul class="nav_category plusList">
-      <li>운동</li>
-      <li>공부시간</li>
-      <li>기상시간</li>
-      <li>독서</li>
-      <li>자율</li>
+      <li onclick = "location.href = '{% url 'health:add_goal' %}' ">운동</li>
+      <li onclick = "location.href = '{% url 'study:add_goal' %}' ">공부시간</li>
+      <li onclick = "location.href = '{% url 'wakeup:add_goal' %}' ">기상시간</li>
+      <li onclick = "location.href = '{% url 'book:add_goal' %}' ">독서</li>
+      <li onclick = "location.href = '{% url 'free:add_goal' %}' ">자율</li>
     </ul>
   </div>
   <a href="" class="btn2">로그아웃</a>
