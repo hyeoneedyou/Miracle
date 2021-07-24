@@ -8,9 +8,9 @@
   </h2>
   <div class="nav_user">
     {% if not user.profile.image %}
-      <img class="nav_logo" src="{% static 'img/logo.png' %}" alt="">
+    <img class="nav_logo" src="{% static 'img/logo.png' %}" alt="">
     {% else %}
-      <img class="nav_logo" src="{{ request.user.profile.image.url }}" alt="">
+    <img class="nav_logo" src="{{ request.user.profile.image.url }}" alt="">
     {% endif %}
     <div class="nav_userText">
       <h3 class="nav_userName">{{request.user.profile.nickname}}</h3>
