@@ -16,7 +16,9 @@
 
 <body>
   <!-- Navigation sector -->
-  {% include 'shared/_navbar.html' %}
+  {% if user.is_authenticated %}
+    {% include 'shared/_navbar.html' %}
+  {% endif %}
   {% block content %}
 
   {% endblock %}

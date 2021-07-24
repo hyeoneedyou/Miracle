@@ -7,9 +7,13 @@
     <a href="{% url 'main:main_login' %}" class="nav_a miracle">MIRACLE</a>
   </h2>
   <div class="nav_user">
-    <img class="nav_logo" src="{% static 'img/logo.png' %}" alt="">
+    {% if not user.profile.image %}
+      <img class="nav_logo" src="{% static 'img/logo.png' %}" alt="">
+    {% else %}
+      <img class="nav_logo" src="{{ request.user.profile.image.url }}" alt="">
+    {% endif %}
     <div class="nav_userText">
-      <h3 class="nav_userName">달달망고</h3>
+      <h3 class="nav_userName">{{request.user.profile.nickname}}</h3>
       <a href="{% url 'users:mypage' %}" class="nav_a mypage">마이페이지</a>
     </div>
   </div>
@@ -82,7 +86,7 @@
       <li onclick = "location.href = '{% url 'free:add_goal' %}' ">자율</li>
     </ul>
   </div>
-  <a href="" class="btn2">로그아웃</a>
+  <a href="{% url 'account_logout' %}" class="btn2">로그아웃</a>
 </nav>
 
 <script src="{% static 'js/navbar.js' %}"></script>
